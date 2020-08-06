@@ -28,25 +28,20 @@ class Owner
     end
 
     def cats
-        #self.name == cat.owner?
         Cat.all.select {|x| x.owner == self}
     end
 
     def dogs
-        #self.name == cat.owner?
         Dog.all.select {|x| x.owner == self}
     end
 
     def buy_cat(cat_name)
-        #owner needs to obtain cat by name
-        #and cat needs to be part of cat class
         new_cat = Cat.new(cat_name, self)
-        #binding.pry
     end
 
     def buy_dog(dog_name)
         new_dog = Dog.new(dog_name, self)
-        #binding.pry
+        
     end
 
     def walk_dogs
